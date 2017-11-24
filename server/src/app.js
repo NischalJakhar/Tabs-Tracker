@@ -15,10 +15,8 @@ app.get('/status',(req,res)=>{
 });
 });
 
-
-app.listen(8082,function(){
-    console.log("Server started on http://localhost:8082");
-});
+const port = 1337 || process.env.PORT;
+app.listen(port,() => console.log(`Server started on http://localhost:${port} `));
 
 
 
